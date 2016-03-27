@@ -1,0 +1,8 @@
+# SQLite version 3.x
+#   gem install sqlite3
+# this should be under /config in your sinatra app
+development:
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000
