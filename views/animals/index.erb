@@ -1,0 +1,20 @@
+<h1> View our Animals for Adoption </h1>
+
+<p> <a href="/animals/new">Add new Animal</a> </p>
+
+<table border="1" cellpadding="5" cellspacing="5">
+<% @animals.each do |animal| %>
+   <tr> 
+     <td> <a href="/animals/<%= animal.id %>"><%= animal.name %></a> </td>
+     <td> <%= animal.species %> </td> 
+     <td> <a href="/animals/<%= animal.id %>/edit">Edit</a> </td> </td>
+     <td> 
+       <form action="/animals/<%= animal.id %>" method="post">
+         <input name="_method" type="hidden" value="delete">
+         <input type="submit" value="Delete">
+       </form>
+     </td>
+   </tr>
+<% end %>
+</table>
+

@@ -1,0 +1,10 @@
+<h1> Edit a Animal </h1>
+
+<form action="/animals/<%= @animal.id %>" method="post">
+name:
+<input type="text" name="name" value="<%= @animal.name %>">
+species:
+<input type="text" name="species" value="<%= @animal.species %>">
+
+<input type="submit" value="submit">
+</form>
